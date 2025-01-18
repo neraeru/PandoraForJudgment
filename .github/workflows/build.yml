@@ -30,7 +30,7 @@ jobs:
           pyinstaller --onefile --windowed --add-data "dist:data" damage_calculator.py
 
       - name: Upload macOS app
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: damage_calculator
           path: dist/damage_calculator.app  # Путь к сгенерированному .app файлу
