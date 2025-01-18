@@ -26,8 +26,8 @@ jobs:
 
       - name: Build .app with PyInstaller
         run: |
-          # Команда для создания .app файла для macOS
-          pyinstaller --windowed --add-data "damage_calculator.py:." damage_calculator.py
+          # Создание .app файла для macOS
+          pyinstaller --onefile --windowed --add-data "damage_calculator.py:./damage_calculator.app/Contents/Resources" damage_calculator.py
 
       - name: Upload macOS app
         uses: actions/upload-artifact@v4
